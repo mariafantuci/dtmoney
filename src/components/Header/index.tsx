@@ -1,12 +1,20 @@
 import logoImg from "../../assets/logo.svg";
 import { Container, Content } from "./syles";
 
-export function Header() {
+interface HeaderProps {
+  onPenNewTransactionModal: () => void;
+}
+
+export function Header({onPenNewTransactionModal}: HeaderProps) {
   return (
     <Container>
       <Content>
         <img src={logoImg} alt="dt money - logo" />
-        <button type="button">Nova transação</button>
+        <button type="button" onClick={onPenNewTransactionModal}>
+          Nova transação
+        </button>
+
+        
       </Content>
     </Container>
   );
