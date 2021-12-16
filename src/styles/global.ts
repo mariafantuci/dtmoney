@@ -10,7 +10,9 @@ export const GlobalStyle = createGlobalStyle`
         --green: #33CC95;
         --shape: #FFFFFF;
         --text-title: #363F5F;
-        --body-text: #969CB3;
+        --text-body: #969CB3;
+        --input-background: #e7e9ee;
+        --input-border-color: #d7d7d7;
     }
     *{
         margin: 0;
@@ -67,11 +69,23 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content{
         width: 100%;
         max-width: 576px;
-        background-color: var(--background);
+        background: var(--background);
         padding: 3rem;
         position: relative;
         border-radius: 0.24rem;
-        
-    }
 
+    }
+    .react-modal-close{
+      position: absolute;
+      right: 1.5rem;
+      top: 1.5rem;
+      border: 0;
+      background: transparent;
+
+      transition: filter 0.2s;
+      
+      &:hover{
+          filter: brightness(0.9);
+      }
+    }
 `;
