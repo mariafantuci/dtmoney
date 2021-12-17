@@ -4,6 +4,7 @@ import { Container, TransitionTypeContainer } from "./style";
 import closeImg from "../../assets/close.svg";
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
+import { useState } from "react";
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -12,8 +13,11 @@ interface NewTransactionModalProps {
 
 export function NewTransactionModal({
   isOpen,
-  onRequestClose,
+  onRequestClose
 }: NewTransactionModalProps) {
+  const [type, useType] = useState('deposit');
+
+
   return (
     <Modal
       overlayClassName="react-modal-overlay"
