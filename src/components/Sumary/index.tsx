@@ -6,8 +6,7 @@ import { TransactionsContext } from "../../TransactionsContext";
 import React, { useContext } from "react";
 
 export function Summary() {
-  const transactions = useContext(TransactionsContext);
-  console.log(transactions);
+  const { transactions } = useContext(TransactionsContext);
   return (
     <Container>
       <div>
