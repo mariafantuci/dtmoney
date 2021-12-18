@@ -2,10 +2,20 @@ import { Container } from "./style";
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
 import sumImg from "../../assets/total.svg";
+import { TransactionsContext } from "../../TransactionsContext";
+import React, { useContext } from "react";
 
 export function Summary() {
+  const data = useContext(TransactionsContext); //jeito novo de usar o contexto em react
+  console.log(data)
   return (
     <Container>
+      <TransactionsContext.Consumer>
+        {(data) => { //jeito antigo de usar o contexto em react
+          console.log(data);
+          return <span>ok</span>;
+        }}
+      </TransactionsContext.Consumer>
       <div>
         <header>
           <p>Entradas</p>
