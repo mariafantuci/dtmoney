@@ -1,5 +1,5 @@
 {
-  "include": ["src", "src/TransactionsContext.ts"],
+  "include": ["src", "src/TransactionsContext.tsx"],
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
