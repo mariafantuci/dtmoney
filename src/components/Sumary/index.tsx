@@ -6,16 +6,9 @@ import { TransactionsContext } from "../../TransactionsContext";
 import React, { useContext } from "react";
 
 export function Summary() {
-  const data = useContext(TransactionsContext); //jeito novo de usar o contexto em react
-  console.log(data)
+  const data = useContext(TransactionsContext);
   return (
     <Container>
-      <TransactionsContext.Consumer>
-        {(data) => { //jeito antigo de usar o contexto em react
-          console.log(data);
-          return <span>ok</span>;
-        }}
-      </TransactionsContext.Consumer>
       <div>
         <header>
           <p>Entradas</p>
