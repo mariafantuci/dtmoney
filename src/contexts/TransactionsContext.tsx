@@ -5,7 +5,7 @@ interface TransactionsType {
     description: string,
     type: 'income' | 'outcome',
     category: string,
-    total: number,
+    price: number,
     createdAt: string
 }
 
