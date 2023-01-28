@@ -1,0 +1,15 @@
+Por que um component renderiza ?
+- Hooks changed (mudou estado, contexto, reducer);
+- Props changed (mudou propriedades);
+- Parent rerendered (component Pai renderizou);
+
+qual o fluxo de renderização ?
+1. O React recria o HTML da interface daquele component
+2. Compara a versão do HTML recriada coma versão anterior
+3. SE mudou alguma coisa, ele reescreve o HTML na tela
+
+Memo: é uma função do componente do react que é utilizada para memorizar um componente
+0. Hooks changed, Props changed (deep comparison)
+0.1: comparar com a anterior dos hooks e props
+0.2: SE mudou algo, ele vai permitir a nova renderização
+E SÓ DEPOIS FAZ VERIFICA O FLUXO NORMAL
